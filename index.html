@@ -75,9 +75,9 @@
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div> -->
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+                  <!-- Arxiv PDF link -->
+                  <!-- <div class="column has-text-centered">
+                    <div class="publication-links">            
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -86,10 +86,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -97,10 +97,10 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -108,16 +108,16 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv</span> -->
                 </a>
               </span>
             </div>
@@ -127,6 +127,73 @@
     </div>
   </div>
 </section>
+
+
+<!-- Video Selection -->
+<section class="hero teaser mt-4 ">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Interactive Video Demo</h2>
+    <div class="hero-body">
+    
+    <div>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" id="button-plc" onclick="showButtons(0)">Drawer</button>
+        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="showButtons(1)">Chopping Board</button>
+      </div>
+    </div>
+
+
+    <div class="mt-4" id="drawerButtons" style="display:none;">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/drawer_right.mp4', 'move and open drawer with knives and forks')">Moving Right</button>
+        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_zoomout.mp4', 'move and open drawer with carrots')">Zoom Out</button>
+        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_down_zoomin.mp4', 'move and open drawer with chopping board')">Zoom In</button>
+      </div>
+    </div>
+
+    <div class="mt-4" id="kitchenButtons" style="display:none;">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/kitchen_left.mp4', 'move in front of cutting board')">Moving Left</button>
+        <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/kitchen_right.mp4', 'move in front of cutting board')">Moving Right</button>
+        <!-- <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_up.mp4', 'move and cut up a piece of food on a cutting board')">Moving Up and Cut</button> -->
+        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_zoomout.mp4', 'move and cut up a piece of food on a cutting board')">Zoom Out and Cut</button>
+        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_zoomin.mp4', 'move and cut up a piece of food on a cutting board')">Zoom In and Cut</button>
+        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/choppingboard_still.mp4', 'cut up a piece of food on a cutting board')">Still</button>
+
+        <!-- zoom in & cut -->
+      </div>
+    </div>
+
+    <div class="mt-4" id="PlaceholderButtons2" style="display:none;">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" onclick="changeVideoSource('videos/interactive/drawer_right.mp4')">Moving Left</button>
+      </div>
+    </div>
+  
+    <div class="card mt-4">
+      <div class="card-body" id="caption">
+        Prompts:
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="embed-responsive embed-responsive-16by9 mt-4">
+        <iframe id="demoVideo" class="embed-responsive .resizable-iframe" src="videos/interactive/drawer_right.mp4" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
+      <!-- <div id="videoContainer1" class="mt-5">
+          <video id="videoPlayer" controls>
+              <source id="videoSource" src="videos/interactive/kitchen_moving_right.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div> -->
+
+    </div>
+  </div>
+</section>
+<!-- End Video Selection -->
 
 
 <!-- Paper abstract -->
@@ -153,7 +220,7 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<section class="hero teaser mt-5">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Precise Camera Control</h2>
     <div class="hero-body">
