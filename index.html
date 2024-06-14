@@ -137,9 +137,9 @@
     
     <div>
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" id="button-plc" onclick="showButtons(0)">Drawer</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="showButtons(1)">Wash Hand</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="showButtons(2)">Chopping Board</button>
+        <button type="button" class="btn btn-primary" id="button-plc" onclick="groupSelectionButtonHandler(0)">Drawer</button>
+        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(1)">Wash Hand</button>
+        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(2)">Chopping Board</button>
       </div>
     </div>
 
@@ -178,19 +178,14 @@
       </div>
     </div>
 
-    <div class="wrapper">
+    <div class="container">
       <div class="embed-responsive embed-responsive-16by9 mt-4">
-        <iframe id="demoVideo" class="embed-responsive .resizable-iframe" src="videos/interactive/drawer_right.mp4" allowfullscreen></iframe>
+        <!-- <iframe id="demoVideo" class="embed-responsive .resizable-iframe" src="videos/interactive/drawer_right.mp4" allowfullscreen></iframe> -->
+        <video id="videoPlayer" controls poster="videos/interactive/drawer_1stframe.png">
+          <source id="videoSource" src="" type="video/mp4">
+        </video>
       </div>
     </div>
-
-
-      <!-- <div id="videoContainer1" class="mt-5">
-          <video id="videoPlayer" controls>
-              <source id="videoSource" src="videos/interactive/kitchen_moving_right.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-      </div> -->
 
     </div>
   </div>
