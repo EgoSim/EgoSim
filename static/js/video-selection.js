@@ -1,4 +1,4 @@
-const buttonGroupIds = ["drawerButtons", "kitchenButtons", "PlaceholderButtons2"];
+const buttonGroupIds = ["drawerButtons", "sinkButtons", "kitchenButtons"];
 
 
 const showButtons = (idx) => {
