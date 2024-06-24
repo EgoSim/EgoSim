@@ -1,8 +1,10 @@
-const buttonGroupIds = ["drawerButtons", "washHandButtons", "kitchenButtons"];
+const buttonGroupIds = ["drawerButtons", "washHandButtons", "kitchenButtons", "realestateKitchenButtons", "realestateBedroomButtons"];
 const posters = [
     "videos/interactive/drawer_1stframe.png",
     "videos/interactive/washhand_1stframe.png",
-    "videos/interactive/choppingboard_1stframe.png"
+    "videos/interactive/choppingboard_1stframe.png",
+    "videos/interactive/realestateKitchen.jpg",
+    "videos/interactive/realestateBedroom.jpg"
 ];
 
 const showButtons = (idx) => {
