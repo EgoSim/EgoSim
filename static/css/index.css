@@ -1,11 +1,6 @@
-.wrapper {
-  width: 600px;
-  height: auto; /* Maintain aspect ratio */
-
-  position: relative;
-  left: 230px;
-  display: flex;
-  justify-content: center; /* Horizontally center the child */
+.video-container {
+  width: 70%;
+  margin: 0 auto; /* Center the container horizontally */
 }
 
 
