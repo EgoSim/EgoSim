@@ -1,13 +1,11 @@
-const buttonGroupIds = ["drawerButtons", "washHandButtons", "kitchenButtons", "realestateKitchenButtons", "realestateBedroomButtons",
-    "realestateSteppeButtons"
+const buttonGroupIds = ["drawerButtons", "washHandButtons", "kitchenButtons", "realestateKitchenButtons", "realestateBedroomButtons"
 ];
 const posters = [
     "videos/interactive/drawer_1stframe.png",
     "videos/interactive/washhand_1stframe.png",
     "videos/interactive/choppingboard_1stframe.png",
     "videos/interactive/realestateKitchen.jpg",
-    "videos/interactive/realestateBedroom.jpg",
-    "videos/interactive/realestateSteppe.jpg"
+    "videos/interactive/realestateBedroom.jpg"
 ];
 
 const showButtons = (idx) => {
@@ -20,6 +18,8 @@ const groupSelectionButtonHandler = (idx) => {
     $('#videoSource').attr('src', '');
     $('#videoPlayer')[0].load();
     $('#videoPlayer').attr('poster', posters[idx]);
+    $('#arrow-img-1').css('visibility', 'hidden');
+    $('#arrow-img-2').css('visibility', 'visible');
 }
 
 const changeVideoSource = (source) => {

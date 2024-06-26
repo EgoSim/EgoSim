@@ -37,6 +37,7 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -133,90 +134,87 @@
 <section class="hero teaser mt-4 ">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Interactive Video Demo</h2>
-    <div class="hero-body">
+    <div class="hero-body colored-background pt-4">
     
-    <div>
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" id="button-plc" onclick="groupSelectionButtonHandler(0)">Drawer</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(4)">Bedroom</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(1)">Wash Hand</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(3)">Kitchen</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(2)">Chopping Board</button>
-        <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(5)">Steppe</button>
+      <div>
+        <img src="static/images/right-arrow.png" alt="arrow" class="inline-image mr-3" width="30" id="arrow-img-1">
+        <div class="btn-group" role="group" aria-label="Basic example">     
+          <button type="button" class="btn btn-primary" id="button-plc" onclick="groupSelectionButtonHandler(0)">Drawer</button>
+          <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(4)">Bedroom</button>
+          <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(1)">Wash Hand</button>
+          <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(3)">Kitchen</button>
+          <button type="button" class="btn btn-primary ml-2" id="button-kitchen" onclick="groupSelectionButtonHandler(2)">Chopping Board</button>
+        </div>
       </div>
-    </div>
 
 
-    <div class="mt-4" id="drawerButtons" style="display:none;">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/drawer_right.mp4', 'move and open drawer with knives and forks')">Moving Right</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_zoomout.mp4', 'move and open drawer with carrots')">Zoom Out</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_down_zoomin.mp4', 'move and open drawer with chopping board')">Zoom In</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_roll.mp4', 'open drawer with green vegetables')">Roll Camera</button>
+      <div class="inline-container mt-2">
+        <img src="static/images/right-arrow.png" alt="arrow" class="inline-image mr-3 mt-4" width="30" id="arrow-img-2" style="visibility: hidden;">
+
+        <div class="mt-4" id="drawerButtons" style="display:none;">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/drawer_right.mp4', 'move and open drawer with knives and forks')">Moving Right</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_zoomout.mp4', 'move and open drawer with carrots')">Zoom Out</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_down_zoomin.mp4', 'move and open drawer with chopping board')">Zoom In</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/drawer_roll.mp4', 'open drawer with green vegetables')">Roll Camera</button>
+          </div>
+        </div>
+
+        <div class="mt-4" id="washHandButtons" style="display:none;">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/washhand-zoomin.mp4', 'wash hand')">Zoom In</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand-zoomout.mp4', 'wash hand')">Zoom Out</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand-up.mp4', 'wash hand')">Move Up</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand-up-zoomout.mp4', 'wash hand')">Move Up and Zoom Out</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand_roll.mp4', 'wash hand')">Roll Camera</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand_yaw.mp4', 'wash hand')">Look Right</button>
+          </div>
+        </div>
+
+        <div class="mt-4" id="kitchenButtons" style="display:none;">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/choppingboard_still.mp4', 'cut up a piece of food on a cutting board')">Still and Cut</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_left.mp4', 'move in front of cutting board')">Moving Left</button>
+            <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/kitchen_right.mp4', 'move in front of cutting board')">Moving Right</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_zoomout.mp4', 'move and cut up a piece of food on a cutting board')">Zoom Out and Cut</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_zoomin.mp4', 'move and cut up a piece of food on a cutting board')">Zoom In and Cut</button>
+          </div>
+        </div>
+
+        <div class="mt-4" id="realestateKitchenButtons" style="display:none;">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/realestate_kitchen_refrigerator.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Refridgerator</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/realestate_kitchen_oven.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Oven</button>
+            <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_kitchen_room.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Room</button>
+            <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_kitchen_leftarea.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Left Exit</button>
+          </div>
+        </div>
+
+        <div class="mt-4" id="realestateBedroomButtons" style="display:none;">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/realestate_bedroom_bed.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Bed</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/realestate_bedroom_out.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Get Out</button>
+            <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_bedroom_window.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Window</button>
+            <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_bedroom_bedstand.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Bedstand</button>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <div class="mt-4" id="washHandButtons" style="display:none;">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/washhand-zoomin.mp4', 'wash hand')">Zoom In</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand-zoomout.mp4', 'wash hand')">Zoom Out</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand-up.mp4', 'wash hand')">Move Up</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand-up-zoomout.mp4', 'wash hand')">Move Up and Zoom Out</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand_roll.mp4', 'wash hand')">Roll Camera</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/washhand_yaw.mp4', 'wash hand')">Look Right</button>
+      <div class="card mt-4">
+        <div class="card-body" id="caption">
+          Prompts:
+        </div>
       </div>
-    </div>
 
-    <div class="mt-4" id="kitchenButtons" style="display:none;">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/choppingboard_still.mp4', 'cut up a piece of food on a cutting board')">Still and Cut</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_left.mp4', 'move in front of cutting board')">Moving Left</button>
-        <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/kitchen_right.mp4', 'move in front of cutting board')">Moving Right</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_zoomout.mp4', 'move and cut up a piece of food on a cutting board')">Zoom Out and Cut</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/kitchen_zoomin.mp4', 'move and cut up a piece of food on a cutting board')">Zoom In and Cut</button>
+      <div class="container-md video-container">
+        <div class="embed-responsive embed-responsive-16by9 mt-4">
+          <!-- <iframe id="demoVideo" class="embed-responsive .resizable-iframe" src="videos/interactive/drawer_right.mp4" allowfullscreen></iframe> -->
+          <video id="videoPlayer" controls poster="videos/interactive/drawer_1stframe.png">
+            <source id="videoSource" src="" type="video/mp4">
+          </video>
+        </div>
       </div>
-    </div>
-
-    <div class="mt-4" id="realestateKitchenButtons" style="display:none;">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/realestate_kitchen_refrigerator.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Refridgerator</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/realestate_kitchen_oven.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Oven</button>
-        <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_kitchen_room.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Room</button>
-        <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_kitchen_leftarea.mp4', 'a kitchen with a refridgerator, a sink, an oven and a microwave')">Left Exit</button>
-      </div>
-    </div>
-
-    <div class="mt-4" id="realestateBedroomButtons" style="display:none;">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/realestate_bedroom_bed.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Bed</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/realestate_bedroom_out.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Get Out</button>
-        <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_bedroom_window.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Window</button>
-        <button type="button" class="btn btn-primary ml-2"  onclick="changeVideoHandler('videos/interactive/realestate_bedroom_bedstand.mp4', 'a bedroom with a bed, a bedstand with lamb on it, and a windows')">Bedstand</button>
-      </div>
-    </div>
-
-    <div class="mt-4" id="realestateSteppeButtons" style="display:none;">
-      <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/realestate_steppe_left.mp4', 'steppe with two trees')">Left Tree</button>
-        <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/realestate_steppe_right.mp4', 'steppe with two trees')">Right Tree</button>
-      </div>
-    </div>
-
-
-    <div class="card mt-4">
-      <div class="card-body" id="caption">
-        Prompts:
-      </div>
-    </div>
-
-    <div class="container-md video-container">
-      <div class="embed-responsive embed-responsive-16by9 mt-4">
-        <!-- <iframe id="demoVideo" class="embed-responsive .resizable-iframe" src="videos/interactive/drawer_right.mp4" allowfullscreen></iframe> -->
-        <video id="videoPlayer" controls poster="videos/interactive/drawer_1stframe.png">
-          <source id="videoSource" src="" type="video/mp4">
-        </video>
-      </div>
-    </div>
 
     </div>
   </div>
