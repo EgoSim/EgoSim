@@ -3,6 +3,13 @@
   margin: 0 auto; /* Center the container horizontally */
 }
 
+.overview-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .colored-background {
   background-color: #D7DBDD;
   opacity: 0.95;
