@@ -21,6 +21,10 @@
   align-items: center; /* Align items vertically in the center */
 }
 
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: 'Noto Sans', sans-serif;
 }
