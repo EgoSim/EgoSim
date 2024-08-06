@@ -1,20 +1,16 @@
-const buttonGroupIds = [
-    "drawerButtons",
-    "washHandButtons",
-    "kitchenButtons",
-    "realestateKitchenButtons",
-    "realestateBedroomButtons",
-    "bathroomButtons",
-    "tworoomsButtons",
-];
+const buttonGroupIds = Array.from({ length: 10 }, (_, index) => `s${index + 1}Buttons`);
+
 const posters = [
-    "videos/interactive/drawer_1stframe.png",
-    "videos/interactive/washhand_1stframe.png",
-    "videos/interactive/choppingboard_1stframe.png",
-    "videos/interactive/realestateKitchen.jpg",
-    "videos/interactive/realestateBedroom.jpg",
-    "videos/interactive/bathroom/startframe.jpg",
-    "videos/interactive/tworooms/startframe.jpg",
+    "videos/interactive/s1/s1.png",
+    "videos/interactive/s2/s2.jpg",
+    "videos/interactive/s3/s3.jpg",
+    "videos/interactive/s4/s4.png",
+    "videos/interactive/s5/s5.jpg",
+    "videos/interactive/s6/s6.png",
+    "videos/interactive/s7/s7.jpg",
+    "videos/interactive/s8/s8.jpg",
+    "videos/interactive/s9/s9.jpg",
+    "videos/interactive/s10/s10.jpg",
 ];
 
 const showButtons = (idx) => {
