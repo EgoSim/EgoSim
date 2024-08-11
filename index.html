@@ -140,6 +140,12 @@
       <div class="row mb-5">
 
         <div class="col-2">
+          <a onclick="groupSelectionButtonHandler(10)" data-bs-toggle="modal">
+              <img src="videos/interactive/s11/s11.jpg" class="img-thumbnail" alt="Image 1">
+          </a>
+        </div>
+
+        <div class="col-2">
             <a onclick="groupSelectionButtonHandler(0)" data-bs-toggle="modal">
                 <img src="videos/interactive/s1/s1.png" class="img-thumbnail" alt="Image 1">
             </a>
@@ -169,15 +175,16 @@
           </a>
         </div>
 
+      </div>
+
+      <!-- 2nd row of thumbnails -->
+      <div class="row">
+
         <div class="col-2">
           <a onclick="groupSelectionButtonHandler(5)" data-bs-toggle="modal">
               <img src="videos/interactive/s6/s6.png" class="img-thumbnail" alt="Image 4">
           </a>
         </div>
-      </div>
-
-      <!-- 2nd row of thumbnails -->
-      <div class="row">
 
         <div class="col-2">
             <a onclick="groupSelectionButtonHandler(6)" data-bs-toggle="modal">
@@ -293,6 +300,19 @@
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/s10/s10-room.mp4', 'a room with cabinets')">Go Straight</button>
             <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s10/s10-right.mp4', 'a corridor')">Turn Right</button>
+          </div>
+        </div>
+
+        <div class="mt-4" id="s11Buttons" style="display:none;">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary" onclick="changeVideoHandler('videos/interactive/s11/still-open.mp4', 'open drawer')">Open & Still</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/still-close.mp4', 'close drawer')">Close & Still</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/zoom-open.mp4', 'open drawer')">Open & Zoom In</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/zoom-close.mp4', 'close drawer')">Close & Zoom In</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/movedown-open.mp4', 'open drawer')">Open & Move Down</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/movedown-close.mp4', 'close drawer')">Close & Move Down</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/rotate-open.mp4', 'open drawer')">Open & Rotate</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="changeVideoHandler('videos/interactive/s11/rotate-close.mp4', 'close drawer')">Close & Rotate</button>
           </div>
         </div>
 

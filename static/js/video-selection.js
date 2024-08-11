@@ -1,4 +1,4 @@
-const buttonGroupIds = Array.from({ length: 10 }, (_, index) => `s${index + 1}Buttons`);
+const buttonGroupIds = Array.from({ length: 11 }, (_, index) => `s${index + 1}Buttons`);
 
 const posters = [
     "videos/interactive/s1/s1.png",
@@ -11,6 +11,7 @@ const posters = [
     "videos/interactive/s8/s8.jpg",
     "videos/interactive/s9/s9.jpg",
     "videos/interactive/s10/s10.jpg",
+    "videos/interactive/s11/s11.jpg",
 ];
 
 const showButtons = (idx) => {
