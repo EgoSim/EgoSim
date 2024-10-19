@@ -79,5 +79,5 @@ const srcMap = {
 
 const changeVideoAndGifHandler = (id) => {
     changeVideoHandler(srcMap[id].video_source, srcMap[id].caption);
-    changeGifHandler(srcMap[id].gif_source);
+    // changeGifHandler(srcMap[id].gif_source);
 };
